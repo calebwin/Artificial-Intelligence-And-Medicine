@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+<!--Let browser know website is optimized for mobile-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body: {
+        background-color: #eceff1;
+    }
+
+    h1: {
+        font-size: 200px;
+        font-family: 'Roboto Thin';
+    }
+</style>
+<script>
+</script>
+</head>
+
+<body>
+    <nav class="navbar-fixed">
+        <div class="nav-wrapper grey lighten-4">
+            <a href="#" class="brand-logo center blue-grey-text darken-3 ">Frequently Asked Questions</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                <li> <a class="modal-trigger waves-effect waves-light btn" href="#testyourself">Test Yourself</a>
+            </ul>
+        </div>
+    </nav><br>
+    <!-- Modal Structure -->
+    <div id="testyourself" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Test Yourself</h4>
+            <p>Take this quiz to see how much you know about the frequently asked questions mentioned on this page.</p>
+            <ul class="collection">
+                <li class="collection-item">
+                    <p>Does the National Research Council prefer the term "precision medicine" or the term "personalized medicine?"</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="precision" />
+                            <label for="precision">Precision Medicine</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="personalized" />
+                            <label for="personalized">Personalized Medicine</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>What law provides hospitals financial incentives for using EHRs?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="pmi" />
+                            <label for="pmi">The Precision Medicine Initiative</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="hippa" />
+                            <label for="hippa">The Health Insurance Portability and Accountability Act</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="hitech" />
+                            <label for="hitech">The Health Information Technology for Economic and Clinical Health Act</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>What are narrative notes?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="comp" />
+                            <label for="comp">Computer-generated notes that summarize a patient's condition</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="doctor" />
+                            <label for="doctor">Notes doctors write down as they scan patients' health records</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="clinic" />
+                            <label for="clinic">Notes clinicians write about a patient during a doctor visit</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item" id="final">
+                    <p id="score">Complete the quiz and click the check button to see your score here!</p>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a onclick="check();" class="modal-action modal-close waves-effect waves-red btn-flat ">Close</a>
+            <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="collapsible popout col s12 m8 offset-s2 center" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">How widely used are electronic health records in the US and other countries?</div>
+                <div class="collapsible-body"><span>Electronic health records are used by most large hospital systems in the US but not in all countries. As part of the HITECH act, there are financial incentives for using EHRs and many clinics are adopting them.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">What tools/processes/mechanisms are being used to collect patient data?</div>
+                <div class="collapsible-body"><span>A lot of the patient data collected comes from electronic health records. Other patient data can be collected from narrative notes - the text clinicians write about a patient during a visit. Natural language processing is still relatively insophisticated and it will be sometime before narrative notes can be effectively used as a data source. Fitness trackers and other medical wearables also contribute to patient data records. But since they all structure data in different ways, holistically mining data from health trackers is difficult.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">Does predictive analytics stratify populations into risk groups?</div>
+                <div class="collapsible-body"><span>Yes. Hospitals that use predictive analytics generally do stratify populations into groups based on age, quality of life, and many other factors. Developing predictive algorithms quickly gets difficult because of the number of factors that play into many clinical decisions.</span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col s12 m8 offset-s2 center">
+            <div class="card-panel white">
+                <span class="card-title"><b><u>The 1000 Genomes Project</u></b> </span>
+                <span class="black-text">It is essential to note that the HapMap Project is no longer the research standard for population genomics as the 1000 Genomes (1KG) project has basically claimed that title. Last year, a security flaw in the legacy HapMap site prompted NCBI to take it down. Usage of the HapMap dataset has declined as 1KG increased in popularity. This website still mentions the HapMap because it was clearly the groundwork of a complete haploytypic map of the human genome.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m8 offset-s2 center">
+            <div class="card-panel white">
+                <span class="card-title"><b><u>Personalized Medicine</u></b> </span>
+                <span class="black-text">Personalized Medicine is an older term for precision medicine. It essentially means the same thing - the developement of treatments tailored to the characteristics of an individual patient. But the National Research Council prefers the term precision medicine to personalized medicine because the "personalized medicine" could be misunderstood to mean the creating of drugs that are unique to the patient.
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var responses = [];
+        var correctAnswers = [1,5,8];
+        var correct = 0;
+        var forms = document.getElementsByTagName("input");
+        function check() {
+            correct=0;
+            for(var i = 0; i < forms.length; i++) {
+                for(var j = 0; j < correctAnswers.length; j++) {
+                    if(i+1===correctAnswers[j]&&forms[i].checked) {
+                        correct++;
+                    }
+                }
+            }
+            if(correct<correctAnswers.length) {
+                document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+            } else {
+                document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
+            }
+            localStorage.faq=correct;
+        }
+        $(document).ready(function() {
+            $('#testyourself').modal();
+        });
+    </script>
+</body>
+</html>

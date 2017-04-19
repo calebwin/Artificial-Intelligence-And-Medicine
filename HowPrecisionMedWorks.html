@@ -1,0 +1,221 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/Dogfalo/materialize/master/extras/noUiSlider/nouislider.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></link>
+
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <script src="https://cdn.rawgit.com/Dogfalo/materialize/master/extras/noUiSlider/nouislider.min.js"></script>
+        <script src="https://cdn.rawgit.com/leongersen/wnumb/master/wNumb.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body: {
+                background-color: #eceff1;
+            }
+
+            h1: {
+                font-size: 200px;
+                font-family: 'Roboto Thin';
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar-fixed">
+            <div class="nav-wrapper grey lighten-4">
+                <a href="#" class="brand-logo center blue-grey-text darken-3 ">How Precision Medicine Works</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                    <li> <a class="modal-trigger waves-effect waves-light btn" href="#testyourself">Test Yourself</a>
+                </ul>
+            </div>
+        </nav><br>
+        <!-- Modal Structure -->
+        <div id="testyourself" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Test Yourself</h4>
+                <p>Take this quiz to see how much you know about how precision medicine works.</p>
+                <ul class="collection">
+                    <li class="collection-item">
+                        <p>Which of these is not a source of data for precision medicine algorithms?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="100" />
+                                <label for="100">EHRs</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="80" />
+                                <label for="80">Clinical Tests</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="60" />
+                                <label for="60">Data Warenhouses</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="40" />
+                                <label for="40">Genomic and Molecular Tests</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="0" />
+                                <label for="0">Registries</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item">
+                        <p>What is the second step of the general procedure of precision medicine?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="aa" />
+                                <label for="aa">Matching patients to clinical trials</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="gwas" />
+                                <label for="gwas">Sending challenging cases to a review board</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="al" />
+                                <label for="al">Gathering data</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item">
+                        <p>What is the name of Syapse's precision medicine tool?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="test0" />
+                                <label for="test0">Syaps PrecisionKit</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test1" />
+                                <label for="test1">Syapse Precision Medicine Platform</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test2" />
+                                <label for="test2">Syapse Precision Medicine Testing</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item" id="final">
+                        <p id="score">Complete the quiz and click the check button to see your score here!</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a onclick="check();" class="modal-action modal-close waves-effect waves-red btn-flat ">Close</a>
+                <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m10 offset-s1">
+                <form><div id="test5"></div></form>
+                <!--<form action="#">
+                  <p class="range-field">
+                    <input type="range" id="test5" min="1" max="5" value="1" />
+                  </p>
+              </form>-->
+                <div class="carousel carousel-slider center c" data-indicators="true">
+                    <div class="carousel-fixed-item center">
+                        <a onclick="$('.c').carousel('next')" class="btn waves-effect white grey-text darken-text-2">Next</a>
+                    </div>
+                    <div class="carousel-item amber white-text" href="#one!">
+                        <h2>Precision medicine</h2>
+                        <div class="col s12 m8 offset-s2">
+                            <div class="card-panel white">
+                                <span class="black-text">
+                                    In order for precision medicine algorithms to deliver more precise healthcare, they have to follow a roughly 3-step process as described here.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item green white-text" href="#one!">
+                        <h2>Step 1</h2>
+                        <div class="col s12 m8 offset-s2">
+                            <div class="card-panel white">
+                                <span class="black-text">
+                                    First, the algorithm gets patient data from a varitey of sources including EHRs, registries, data warehouses, and genomic and molecular tests. Some companies are also trying to integrate their software into molecular diagnostic labs. This allows the system to use structured data it can understand to make reliable suggestions.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item blue white-text" href="#two!">
+                        <h2>Step 2</h2>
+                        <div class="col s12 m8 offset-s2">
+                            <div class="card-panel white">
+                                <span class="black-text">
+                                    Second, the system matches patients to clinical trials. Sophisticated AI-powered software can quickly search for relevant trials. Most clinical trials have eligibility guidelines which data the specific people who can be tested. The software can quickly ensuring patients match these guidelines.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item red white-text" href="#three!">
+                        <h2>Step 3</h2>
+                        <div class="col s12 m8 offset-s2">
+                            <div class="card-panel white">
+                                <span class="black-text">
+                                    Third, most systems send especially challenging cases to a review board. This panel of experts would asess patient data and relevant clinical trials found by the software.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item amber white-text" href="#four!">
+                        <h2>Syapse</h2>
+                        <div class="col s12 m8 offset-s2">
+                            <div class="card-panel white">
+                                <span class="black-text">
+                                    Many companies follow a process similar to this when developing precision medicine tools. For example, Syapse created a platform called the Syapse Precision Medicine Platform that makes intelligent suggestions to improve patient care. Syapse's healthcare system also ensures physicians are following institutional guidelines. The system also shares its data with other clinicians so its algorithm increases its accuracy as it is used more. While it may not be widely used today and isn't as "precise" as it should be, Syapse is working to eventually bring precision medicine into the mainstream healthcare system.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('.carousel.carousel-slider').carousel({
+                    fullWidth: true
+                });
+            });
+            var slider = document.getElementById("test5");
+            noUiSlider.create(slider, {
+             start: 1,
+             behaviour:"snap",
+             connect: [true,false],
+             step: 1,
+             range: {
+               'min': 1,
+               'max': 6
+             },
+             format: wNumb({
+               decimals: 0
+             })
+            });
+            slider.noUiSlider.on('update', function(){
+                $('.carousel.c').carousel('set', (slider.noUiSlider.get()-1)); // Move next n times.
+            });
+            var responses = [];
+            var correctAnswers = [2,6,10];
+            var correct = 0;
+            var forms = document.getElementsByTagName("input");
+            function check() {
+                correct=0;
+                for(var i = 0; i < forms.length; i++) {
+                    for(var j = 0; j < correctAnswers.length; j++) {
+                        if(i+1===correctAnswers[j]&&forms[i].checked) {
+                            correct++;
+                        }
+                    }
+                }
+                if(correct<correctAnswers.length) {
+                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+                } else {
+                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
+                }
+                localStorage.precisionMedHow=correct;
+            }
+            $(document).ready(function() {
+                $('#testyourself').modal();
+            });
+        </script>
+    </body>
+
+</html>

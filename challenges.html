@@ -1,0 +1,166 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+<!--Let browser know website is optimized for mobile-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body: {
+        background-color: #eceff1;
+    }
+
+    h1: {
+        font-size: 200px;
+        font-family: 'Roboto Thin';
+    }
+</style>
+<script>
+</script>
+</head>
+
+<body>
+    <nav class="navbar-fixed">
+        <div class="nav-wrapper grey lighten-4">
+            <a href="#" class="brand-logo center blue-grey-text darken-3 ">Challenges &amp; Limitations</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                <li> <a class="modal-trigger waves-effect waves-light btn" href="#testyourself">Test Yourself</a>
+            </ul>
+        </div>
+    </nav><br>
+    <!-- Modal Structure -->
+    <div id="testyourself" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Test Yourself</h4>
+            <p>Take this quiz to see how much you know about the limitations and challenges facing predictive and precision medicine.</p>
+            <ul class="collection">
+                <li class="collection-item">
+                    <p>What is the significance value typically used when statistical tests are conducted for medical purposes?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="1" />
+                            <label for="1">0.00000005</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="2" />
+                            <label for="2">0.000005</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="3" />
+                            <label for="3">0.0005</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="4" />
+                            <label for="4">0.005</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="5" />
+                            <label for="5">0.05</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>Why do machine learning algorithms need big data?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="sig" />
+                            <label for="sig">Big data allows the algorithm to determine the significance value.</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="predict" />
+                            <label for="predict">Big data provides algorithms data to test its predictions.</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="confidence" />
+                            <label for="confidence">Big data lets algorithms find associations and correlations with high confidence levels.</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>True/False : The majority of all medical data is mostly consistent.</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="true" />
+                            <label for="true">True</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="false" />
+                            <label for="false">False</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item" id="final">
+                    <p id="score">Complete the quiz and click the check button to see your score here!</p>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a onclick="check();" class="modal-action modal-close waves-effect waves-red btn-flat ">Close</a>
+            <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Lack of Data</span>
+              <p>One of the major problems that faces predictive medicine is the huge amounts of data it needs to be accurate. AI's involvement in medicine is still in its early stages and there are many cases where there is simple not enough data to create a reliable predictive algorithm.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Significance Value</span>
+              <p>The typical significance value for most statistical tests is 0.05. But for statistical tests conducted for medical purposes, a much lower signifance value is used - 0.000005. But is this enough? This is a question we will keep having to ask ourselves untill we can be fully sure that predictive and precision medicine algorithm provide reliable results.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Inconsistency</span>
+              <p>Another challenge is the inconsistency of most data. There are many different companies making internet-connected medical device for hospitals around the world. Most of them format the data they collect in completely different ways. We will have to tackle this problem if we hope to build universal predictive medicine algorithms.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Inconclusiveness</span>
+              <p>One thing that concerns many physicians is the fact that predictive medicine cannot establish scientific reasons for its conclusions. This is a problem that will always exist when machine learning or AI is applied to anything.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Cybersecurity</span>
+              <p>Another thing that concerns many patients is the fact that almost all of their medical data is being used by an algorithm on a computer that <i>could</i> be hacked. While this does present some security issues, most patients' medical data is already being stored on some computer. And unlike predictive medicine algortihms which don't require data about specific individuals, precision medicine requires personal health-related information. This makes data security an even more concerning problem when it is used by precision medicine algorithms. Much has been done to try to stop hackers from gaining confidential information but almost a hundred cybersecurity attacks were targeted at healthcare companies last year sparking even more concern.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        var responses = [];
+        var correctAnswers = [2,8,10];
+        var correct = 0;
+        var forms = document.getElementsByTagName("input");
+        function check() {
+            correct=0;
+            for(var i = 0; i < forms.length; i++) {
+                for(var j = 0; j < correctAnswers.length; j++) {
+                    if(i+1===correctAnswers[j]&&forms[i].checked) {
+                        correct++;
+                    }
+                }
+            }
+            if(correct<correctAnswers.length) {
+                document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+            } else {
+                document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
+            }
+            localStorage.challenges=correct;
+        }
+        $(document).ready(function() {
+            $('#testyourself').modal();
+        });
+    </script>
+</body>
+</html>

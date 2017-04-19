@@ -1,0 +1,257 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+        <!--Let browser know website is optimized for mobile-->
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body: {
+                background-color: #eceff1;
+            }
+
+            h1: {
+                font-size: 200px;
+                font-family: 'Roboto Thin';
+            }
+
+
+        </style>
+        <script>
+            $(document).ready(function() {
+                $('.carousel.carousel-slider').carousel({
+                    fullWidth: true
+                });
+            });
+            $(document).ready(function() {
+                $('#testyourself').modal();
+            });
+        </script>
+    </head>
+
+    <body>
+        <nav class="navbar-fixed">
+            <div class="nav-wrapper grey lighten-4">
+                <a href="#" class="brand-logo center blue-grey-text darken-3 ">3 Procedures of Predictive Medicine</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                    <li> <a class="modal-trigger waves-effect waves-light btn" href="#testyourself">Test Yourself</a>
+                </ul>
+            </div>
+        </nav><br>
+        <!-- Modal Structure -->
+        <div id="testyourself" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Test Yourself</h4>
+                <p>Take this quiz to see how much you know about predictive medicine.</p>
+                <ul class="collection">
+                    <li class="collection-item">
+                        <p>Which of these isn't a procedure of predictive medicine?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="100" />
+                                <label for="100">Analysis of Association</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="80" />
+                                <label for="80">Genome Wide Association Studies</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="60" />
+                                <label for="60">Analysis of Linkage</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="40" />
+                                <label for="40">Single Nucleotide Polymorphism</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item">
+                        <p>What is the modern procedure of predictive medicine?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="aa" />
+                                <label for="aa">Analysis of Association</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="gwas" />
+                                <label for="gwas">Genome Wide Association Studies</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="al" />
+                                <label for="al">Analysis of Linkage</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item">
+                        <p>What is a candidate gene?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="test0" />
+                                <label for="test0">An abnormality in the genetic code</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test1" />
+                                <label for="test1">A gene that is associated with a certain disease</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test2" />
+                                <label for="test2">A gene that can be used to prevent a certain disease</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item">
+                        <p>What is the second step of Analysis of Linkage?</p>
+                        <form action="#">
+                            <p>
+                                <input name="group1" type="radio" id="test0a" />
+                                <label for="test0a">Identifying a critical DNA region of interest</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test1a" />
+                                <label for="test1a">Conducting cell-based or animal-based experiments</label>
+                            </p><p>
+                                <input name="group1" type="radio" id="test2a" />
+                                <label for="test2a">Collecting DNA from patients and their families</label>
+                            </p>
+                        </form>
+                    </li>
+                    <li class="collection-item" id="final">
+                        <p id="score">Complete the quiz and click the check button to see your score here!</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a onclick="check();" class="modal-action modal-close waves-effect waves-red btn-flat ">Close</a>
+                <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="carousel carousel-slider col s12 m4 center carousel1" data-indicators="true">
+                <div class="carousel-fixed-item center">
+                    <a onclick="$('.carousel1').carousel('next')" class="btn waves-effect white grey-text darken-text-2">Next</a>
+                </div>
+                <div class="carousel-item red white-text" href="#one!">
+                    <h2>Analysis of Association</h2>
+                    <h6>Step 1</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                First, we select the most probable "candidate gene" that can be associated with the disease. This is the gene that we can use to detect the risk of someone contracting the disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item amber white-text" href="#two!">
+                    <h2>Analysis of Association</h2>
+                    <h6>Step 2</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Second, we find the important <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="An alternate form of a gene that results from a mutation">allele</a> of the candidate gene. This allele is the specific trait that most likely corresponds with the disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item green white-text" href="#three!">
+                    <h2>Analysis of Association</h2>
+                    <h6>Step 3</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Third, we analyze the frequencies of the allele in populations with the disease and without the disease. Thus, we can determine wether the allele really can be related to the disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item blue white-text" href="#four!">
+                    <h2>Analysis of Association</h2>
+                    <h6>Step 4</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Lastly, we compare our conclusion with a clinically confirmed diagnosis. As a result, we can confidently say that the specific allele is associated with the medical disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel carousel-slider col s12 m4 center carousel2" data-indicators="true">
+                <div class="carousel-fixed-item center">
+                    <a onclick="$('.carousel2').carousel('next')" class="btn waves-effect white grey-text darken-text-2">Next</a>
+                </div>
+                <div class="carousel-item amber white-text" href="#one!">
+                    <h2>Analysis of Linkage</h2>
+                    <h6>Step 1</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                First, we collect DNA from the patients and their families. We can use these DNA samples to find predisposition genes - genes that can be linked to a specific medical disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item green white-text" href="#two!">
+                    <h2>Analysis of Linkage</h2>
+                    <h6>Step 2</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Second, we identify a critcal DNA region of interest. This allows us to estimate the probability that disease features are associated with <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="A gene that can be used to locate other genes on a genetic map">genetic markers</a> in this specific region.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item blue white-text" href="#three!">
+                    <h2>Analysis of Linkage</h2>
+                    <h6>Step 3</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Third, we study differences beween the genetic makeup of children with the disease and children without the disease. Thus, we can identify candidate genes in the DNA region of interest. These candidate genes are most likely the cause of the specific medical disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item red white-text" href="#four!">
+                    <h2>Analysis of Association</h2>
+                    <h6>Step 4</h4>
+                    <div class="col s12 m12">
+                        <div class="card-panel white">
+                            <span class="black-text">
+                                Lastly, we conduct cell-based or animal-based experiments to determine wether or not the candidate gene really causes the disease.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel carousel-slider col s12 m4 center" data-indicators="true">
+                <div class="carousel-fixed-item center">
+                    <a href="GWAS.html" class="btn waves-effect white grey-text darken-text-2">Read More</a>
+                </div>
+                <div class="carousel-item blue white-text" href="#one!">
+                    <h2>GWAS</h2>
+                    <p class="white-text">The method of Genome Wide Association Studies is the modern procedure of predictive medicine.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var responses = [];
+            var correctAnswers = [4,6,9,11];
+            var correct = 0;
+            var forms = document.getElementsByTagName("input");
+            function check() {
+                correct=0;
+                for(var i = 0; i < forms.length; i++) {
+                    for(var j = 0; j < correctAnswers.length; j++) {
+                        if(i+1===correctAnswers[j]&&forms[i].checked) {
+                            correct++;
+                        }
+                    }
+                }
+                if(correct<correctAnswers.length) {
+                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+                } else {
+                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
+                }
+                localStorage.predictiveMedHow=correct;
+            }
+        </script>
+    </body>
+
+</html>

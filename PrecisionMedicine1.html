@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+<!--Let browser know website is optimized for mobile-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body: {
+        background-color: #eceff1;
+    }
+
+    h1: {
+        font-size: 200px;
+        font-family: 'Roboto Thin';
+    }
+</style>
+<script>
+  $(document).ready(function(){
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+  });
+</script>
+</head>
+
+<body>
+    <nav class="navbar-fixed">
+        <div class="nav-wrapper grey lighten-4">
+            <a href="#" class="brand-logo center blue-grey-text darken-3 ">Precision Medicine</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down ">
+                <li> <a class="modal-trigger waves-effect waves-light btn" href="#testyourself">Test Yourself</a>
+            </ul>
+        </div>
+    </nav><br>
+    <!-- Modal Structure -->
+    <div id="testyourself" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Test Yourself</h4>
+            <p>Take this quiz to see how much you know about precision medicine.</p>
+            <ul class="collection">
+                <li class="collection-item">
+                    <p>Which company has developed digital pathology software that analyzes blood samples?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="100" />
+                            <label for="100">KineMed</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="80" />
+                            <label for="80">Pathway Genomics</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="60" />
+                            <label for="60">Epic Sciences</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="40" />
+                            <label for="40">Lumiata</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>What does precision medicine do?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="aa" />
+                            <label for="aa">Creates customized treatments for patients</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="gwas" />
+                            <label for="gwas">Predicts the future health of patients</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="al" />
+                            <label for="al">Analyzes medical records to determine a patient's risk of contracting a certain disease.</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item">
+                    <p>Health-focused wearables provide what information that can be used by precison medicine algorithms?</p>
+                    <form action="#">
+                        <p>
+                            <input name="group1" type="radio" id="test0" />
+                            <label for="test0">Electronic health data</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="test1" />
+                            <label for="test1">Daily diet recorded by the user</label>
+                        </p><p>
+                            <input name="group1" type="radio" id="test2" />
+                            <label for="test2">Wearables don't provide any data that can be used by precison medicine algorithms?</label>
+                        </p>
+                    </form>
+                </li>
+                <li class="collection-item" id="final">
+                    <p id="score">Complete the quiz and click the check button to see your score here!</p>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a onclick="check();" class="modal-action modal-close waves-effect waves-red btn-flat ">Close</a>
+            <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
+        </div>
+    </div>
+    <div class="row">
+          <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
+                        <span class="card-title">Why precision medicine</span>
+                        <p>How precision medicine is helping make better reccomendations for patients</p>
+                    </div>
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width tabs-transparent">
+                            <li class="tab"><a class="active" href="#problem">The Problem</a></li>
+                            <li class="tab"><a href="#solution">The Solution</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-3">
+                        <div id="problem">Typically, when a patient is suffering from an illness or chronic pain, his or her doctor would probably try to diagnose the issue and prescribe a certain drug or create a treatment plan. But this process is considerably inefficient and potentially unreliable. It would be impractical for the doctor to go through all the specific details related to the patient's health. Holistically recommending a medicine or treatment plan would be essentially impossible.</div>
+                        <div id="solution">Precision medicine effectively solves this problem by being able to quickly scan huge amounts of medical data and create customized treatments plans in a much shorter time. As computers become even more powerful, we can only expect precision medicine algorithms to become even more accurate.<br><br><br></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">The 3 Technologies</span>
+                        <p>How technology enhances predictive medicine</p>
+                    </div>
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width tabs-transparent">
+                            <li class="tab"><a class="active" href="#bD">Big Data</a></li>
+                            <li class="tab"><a href="#iOT">Internet of Things</a></li>
+                            <li class="tab"><a href="#mL">Machine Learning</a></li>
+                            <li class="tab"><a href="#how">How it works</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content grey lighten-3">
+                        <div id="mL">Precision medicine has become far more useful in recent years mainly because of huge advancements in  <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="A branch of computer science that gives computers the ability to self-learn without being explicitly programmed">machine learning</a>. Machine learning algorithms can quickly look through a patient's electronic health records and even create a treatment plan in a relatively short time. Before its usage, doctors would have to manually study patient records and perform tedious calculations. Today, machine learning is streamlining the process and gradually bringing precision medicine to the masses.</div>
+                        <div id="bD">Big data has significantly helped precision medicine become more accurate. As EHRs are becoming more widely used all around the world, precision medicine is slowly becoming more practical. The idea that people will be able to recieve treatments personalized for themselves is slowly becoming a reality.<br><br><br></div>
+                        <div id="iOT">The internet of things plays a key role in precesion medicine. As health-focused wearables are more prevalent today, electronic health data is now more readily available in real time. Precision medicine algorithms can make more useful suggestions for patients no matter where they are.<br><br><br></div>
+                        <div id="how">Machine learning, big data, and the Internet of Things all work together to reliably assist clinicians. <a class="waves-effect" href="architecture.html">Find out how</a><br><br><br><br><br></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                  <span class="card-title">How it works</span>
+                  <p>The process of precision medicine</p>
+              </div>
+              <div class="card-content grey lighten-3">
+                  <p>How machine learning algorithms transform health records into simple and precise suggestions for patients, doctors, and clinicians. <a class="waves-effect" href="HowPrecisionMedWorks.html">Read here</a></p><br><br>
+              </div>
+          </div>
+      </div>
+      <div class="col s12 m6">
+          <!--
+          <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                  <span class="card-title">Challenges</span>
+                  <p>Some of the problems that face people building algorithms for predictive medicine, precision medicine, and personalized medicine</p>
+              </div>
+              <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width tabs-transparent">
+                      <li class="tab"><a class="active" href="#lackData">Lacking Data</a></li>
+                      <li class="tab"><a href="#marginError">Margin of Error</a></li>
+                      <li class="tab"><a href="#inconsistent">Inconsistent Data Structures</a></li>
+                    </ul>
+              </div>
+              <div class="card-content grey lighten-3">
+                  <div id="lackData">One of the major problems that face healthcare-related algorithms is their need for huge amounts of data in order to be accurate. AI's involvement in medicine is still in its early stages and there are many cases where there is simple not enough data to create a reliable algorithm.</div>
+                  <div id="marginError">Predictive medicine also </div>
+                  <div id="inconsistent">Another challenge is the inconsistency of most data. There are numerous different companies making internet-connected medical device for hospitals around the world. Most of them format the data they collect in completely different ways. We will have to tackle this problem if we hope to build universal medicine-related algorithms.</div>
+              </div>
+          </div>-->
+          <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                    <span class="card-title">Research</span>
+                    <p>A few of the companies developing predictive analytics for medicine</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width tabs-transparent">
+                        <li class="tab"><a class="active" href="#kinemed">KineMed</a></li>
+                        <li class="tab"><a href="#epic">Epic Sciences</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-3">
+                    <div id="kinemed">KineMed's technology uses mass spectometry and thousands of biomarkers to create reliable personalized suggestions for patients.</div>
+                    <div id="epic">Epic Sciences has developed a digital pathology software that can analyze blood samples and perform genomic tests on single cells.</div>
+                </div>
+            </div>
+      </div>
+    </div>
+</body>
+<script>
+    var responses = [];
+    var correctAnswers = [3,5,8];
+    var correct = 0;
+    var forms = document.getElementsByTagName("input");
+    function check() {
+        correct=0;
+        for(var i = 0; i < forms.length; i++) {
+            for(var j = 0; j < correctAnswers.length; j++) {
+                if(i+1===correctAnswers[j]&&forms[i].checked) {
+                    correct++;
+                }
+            }
+        }
+        if(correct<correctAnswers.length) {
+            document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+        } else {
+            document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
+        }
+        localStorage.precisionMed=correct;
+    }
+    $(document).ready(function() {
+        $('#testyourself').modal();
+    });
+</script>
+</html>
