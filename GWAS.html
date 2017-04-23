@@ -98,6 +98,10 @@
                 <a href="#final" onclick="check();" class="modal-action waves-effect waves-green btn-flat ">Check</a>
             </div>
         </div>
+        <br><br>
+        <div class="row">
+            <form class="col s12 m7 offset-s4"><div id="test5"></div></form>
+        </div>
         <div class="row">
             <div class="carousel carousel-slider col s12 m3 offset-s1 center" data-indicators="true">
                 <div class="carousel-fixed-item center">
@@ -109,7 +113,6 @@
                 </div>
             </div>
             <div class="col s12 m7">
-                <form><div id="test5"></div></form>
                 <!--<form action="#">
                   <p class="range-field">
                     <input type="range" id="test5" min="1" max="5" value="1" />
@@ -125,7 +128,7 @@
                         <div class="col s12 m12">
                             <div class="card-panel white">
                                 <span class="black-text">
-                                    Genome-wide association studies rely on huge amounts of data. Algorithms comb through this data searching for differences in the genetic makeup of individuals. Then the algorithm can find the specific single nucleotide polymorphisms (SNP's) that can be correlated with a medical disease.
+                                    Genome-wide association studies rely on huge amounts of data. Algorithms comb through this data searching for differences in the genetic makeup of individuals. Then the algorithm can find the specific single nucleotide polymorphisms (SNPs) that can be correlated with a medical disease.
                                 </span>
                             </div>
                         </div>
@@ -147,7 +150,7 @@
                         <div class="col s12 m12">
                             <div class="card-panel white">
                                 <span class="black-text">
-                                    Second, we filter through the data and ignore certain individuals for various reasons. Either, we may not have enough data, or the sample could have been contaminated.
+                                    Second, we filter through the data and ignore certain individuals for various reasons. Either we may not have enough data, or the sample could have been contaminated.
                                 </span>
                             </div>
                         </div>
@@ -225,7 +228,7 @@
                     }
                 }
                 if(correct<correctAnswers.length) {
-                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Kepp trying! You can re-read the page and find the correct answers if you like.";
+                    document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Keep trying! You can re-read the page and find the correct answers if you like.";
                 } else {
                     document.getElementById("score").innerHTML="You got " + correct+"/"+correctAnswers.length+" correct. Perfect! Thre are more quizzes throughout this website. Go find them!";
                 }
