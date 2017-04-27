@@ -20,6 +20,7 @@
         <div class="col s12 m12">
             <div class="card-panel large grey lighten-4">
                 <h1 class="blue-grey-text darken-3 center-align">Predictive Medicine</span>
+                <li> <a class="waves-effect waves-light btn" href="home.html">Home</a></li>
             </div>
         </div>
     </div>
